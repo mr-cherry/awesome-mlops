@@ -1,0 +1,17 @@
+name: PR workflow
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+
+jobs:
+  print-context:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print GH context
+        run: |
+          echo ${{ github.event.pull_request.head.ref }}
+          echo ${{ github.event.pull_request.base.ref }}
+          echo ${{ github.event.pull_request.number }}
