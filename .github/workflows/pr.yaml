@@ -1,10 +1,10 @@
-name: PR workflow
+# name: PR workflow
 
-on:
-  pull_request:
-    types: [opened, synchronize, reopened]
+# on:
+#   pull_request:
+#     types: [opened, synchronize, reopened]
 
 
-jobs:
-  print-context:
-    uses: ./.github/workflows/pr_call.yaml@pr-branch
+# jobs:
+#   print-context:
+#     uses: ./.github/workflows/pr_call.yaml@master

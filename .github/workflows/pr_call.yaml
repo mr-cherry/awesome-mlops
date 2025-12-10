@@ -1,7 +1,8 @@
 name: PR workflow
 
 on:
-  workflow_call:
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 ENV:
   SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
