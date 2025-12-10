@@ -7,5 +7,4 @@ on:
 
 jobs:
   print-context:
-    if: ${{ github.event.pull_request.head.ref == 'pr-branch' }}
-    uses: ./pr_call.yaml@pr-branch
+    uses: ./.github/workflows/pr_call.yaml@pr-branch
