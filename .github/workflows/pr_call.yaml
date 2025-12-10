@@ -1,7 +1,7 @@
 name: PR workflow
 
 on:
-  pull_request:
+  workflow_call:
     # types: [opened, synchronize, reopened]
 
 ENV:
@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: Print GH context
         run: |
-          echo SOURCE_BRANCH
-          echo TARGET_BRANCH
+          echo ${{ env.SOURCE_BRANCH }}
+          echo ${{ env.TARGET_BRANCH }}
