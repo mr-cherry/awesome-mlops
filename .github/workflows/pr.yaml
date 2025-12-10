@@ -1,0 +1,9 @@
+name: PR workflow call
+
+on:
+  pull_request:
+
+
+jobs:
+  print-context:
+    uses: ./.github/workflows/pr_call.yaml@master
