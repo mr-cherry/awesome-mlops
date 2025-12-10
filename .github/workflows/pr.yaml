@@ -7,7 +7,7 @@ on:
 
 jobs:
   print-context:
-    if: ${{ github.event.pull_request.head.ref }} == "pr-branch"
+    if: ${{ github.event.pull_request.head.ref }} == "pr-branch-fake"
     runs-on: ubuntu-latest
     steps:
       - name: Print GH context
