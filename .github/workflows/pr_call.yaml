@@ -5,9 +5,9 @@ on:
   pull_request:
     # types: [opened, synchronize, reopened]
 
-ENV:
-  SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
-  TARGET_BRANCH: ${{ github.event.pull_request.base.ref }}
+# ENV:
+#   SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
+#   TARGET_BRANCH: ${{ github.event.pull_request.base.ref }}
 
 jobs:
   print-context:
@@ -15,5 +15,5 @@ jobs:
     steps:
       - name: Print GH context
         run: |
-          echo ${{ env.SOURCE_BRANCH }}
-          echo ${{ env.TARGET_BRANCH }}
+          echo ${{ github.event.pull_request.head.ref  }}
+          echo ${{ github.event.pull_request.base.ref }}
