@@ -1,13 +1,7 @@
 name: PR workflow
 
 on:
-  # workflow_call:
-  pull_request:
-    # types: [opened, synchronize, reopened]
-
-# ENV:
-#   SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
-#   TARGET_BRANCH: ${{ github.event.pull_request.base.ref }}
+  workflow_call:
 
 jobs:
   print-context:
@@ -15,5 +9,5 @@ jobs:
     steps:
       - name: Print GH context
         run: |
-          echo ${{ github.event.pull_request.head.ref  }}
+          echo ${{ github.event.pull_request.head.ref }}
           echo ${{ github.event.pull_request.base.ref }}
