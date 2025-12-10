@@ -6,4 +6,4 @@ on:
 
 jobs:
   print-context:
-    uses: ./.github/workflows/pr_call.yaml@master
+    uses: ./.github/workflows/pr_call.yaml
