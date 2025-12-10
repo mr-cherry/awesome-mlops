@@ -8,10 +8,4 @@ on:
 jobs:
   print-context:
     if: ${{ github.event.pull_request.head.ref == 'pr-branch-fake' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print GH context
-        run: |
-          echo ${{ github.event.pull_request.head.ref }}
-          echo ${{ github.event.pull_request.base.ref }}
-          echo ${{ github.event.pull_request.number }}
+    uses: ./pr_call.yaml

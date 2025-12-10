@@ -1,0 +1,17 @@
+name: PR workflow
+
+on:
+  workflow_call:
+
+ENV:
+  SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
+  TARGET_BRANCH: ${{ github.event.pull_request.base.ref }}
+
+jobs:
+  print-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GH context
+        run: |
+          echo SOURCE_BRANCH
+          echo TARGET_BRANCH
